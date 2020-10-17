@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Calc Page </title> </head>
+<body>
+    {% csrf_token %}
+    <form action="/calc" method="POST">
+        <table>
+        {% csrf_token %}
+        {{form.as_table}}
+        </table>
+            <tr><td colspan="2" align="center">
+                <input type="submit" name="submit" value="Add"/>
+                <input type="submit" name="submit" value="Subtract" />
+            </td></tr>
+        </table>
+    </form>
+    <div><a href="/">Home</a></div>
+</body>
+</html>
